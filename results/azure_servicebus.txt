@@ -1,0 +1,65 @@
+Azure-servicebus sync send
+
+producer sent  3 messages in 1.5871870517730713 secs ; rate=1.8901363872951542 msgs/sec
+producer sent  7 messages in 2.5901036262512207 secs ; rate=2.7025945715274067 msgs/sec
+producer sent  11 messages in 3.5915770530700684 secs ; rate=3.0627214277909576 msgs/sec
+producer sent  16 messages in 4.5936408042907715 secs ; rate=3.483075991717706 msgs/sec
+producer sent  20 messages in 5.596646070480347 secs ; rate=3.573568838932037 msgs/sec
+producer sent  24 messages in 6.597939968109131 secs ; rate=3.6374989945351133 msgs/sec
+producer sent  28 messages in 7.601858615875244 secs ; rate=3.6833097555282808 msgs/sec
+producer sent  34 messages in 8.604650497436523 secs ; rate=3.951351656889399 msgs/sec
+producer sent  38 messages in 9.606345891952515 secs ; rate=3.9557184831157897 msgs/sec
+producer sent  43 messages in 10.607953548431396 secs ; rate=4.053562244940112 msgs/sec
+producer sent  48 messages in 11.611143589019775 secs ; rate=4.133959728600016 msgs/sec
+producer sent  52 messages in 12.614305973052979 secs ; rate=4.12230368528271 msgs/sec
+producer sent  57 messages in 13.617277145385742 secs ; rate=4.185858846187516 msgs/sec
+producer sent  61 messages in 14.618637800216675 secs ; rate=4.1727554122105595 msgs/sec
+producer sent  66 messages in 15.622527122497559 secs ; rate=4.224668613630075 msgs/sec
+producer sent  70 messages in 16.623734951019287 secs ; rate=4.210846732473194 msgs/sec
+producer sent  75 messages in 17.627869367599487 secs ; rate=4.2546264914948875 msgs/sec
+producer sent  79 messages in 18.62962579727173 secs ; rate=4.240557532377778 msgs/sec
+producer sent  84 messages in 19.63332962989807 secs ; rate=4.278438837602101 msgs/sec
+producer sent  89 messages in 20.63558554649353 secs ; rate=4.312937948839702 msgs/sec
+producer sent  93 messages in 21.63747549057007 secs ; rate=4.29809845610366 msgs/sec
+producer sent  98 messages in 22.63906216621399 secs ; rate=4.328801223323328 msgs/sec
+producer sent  102 messages in 23.645177364349365 secs ; rate=4.313776057936823 msgs/sec
+producer sent  106 messages in 24.64690661430359 secs ; rate=4.300742549918372 msgs/sec
+producer sent  111 messages in 25.653401613235474 secs ; rate=4.326911560248263 msgs/sec
+producer sent  115 messages in 26.65946102142334 secs ; rate=4.3136656029012315 msgs/sec
+producer sent  120 messages in 27.662195920944214 secs ; rate=4.338050397117712 msgs/sec
+producer sent  125 messages in 28.665349006652832 secs ; rate=4.360665553766299 msgs/sec
+producer sent  129 messages in 29.671266078948975 secs ; rate=4.347640564334472 msgs/sec
+
+===============================================================================
+
+Azure-servicebus sync receive
+
+consumer received 6 messages in 2.505732774734497 secs ; rate=2.394509127429101 msgs/sec
+consumer received 13 messages in 3.5117928981781006 secs ; rate=3.7018128280697677 msgs/sec
+consumer received 19 messages in 4.5171520709991455 secs ; rate=4.206190028886365 msgs/sec
+consumer received 27 messages in 5.518733978271484 secs ; rate=4.8924264344513 msgs/sec
+consumer received 34 messages in 6.525094270706177 secs ; rate=5.210652687830112 msgs/sec
+consumer received 41 messages in 7.527937173843384 secs ; rate=5.446379141215319 msgs/sec
+consumer received 48 messages in 8.53237533569336 secs ; rate=5.625631563487639 msgs/sec
+consumer received 56 messages in 9.5355544090271 secs ; rate=5.872757639239731 msgs/sec
+consumer received 63 messages in 10.539770126342773 secs ; rate=5.977359965616305 msgs/sec
+consumer received 70 messages in 11.545538902282715 secs ; rate=6.062947827074579 msgs/sec
+consumer received 76 messages in 12.548534870147705 secs ; rate=6.056483947046276 msgs/sec
+consumer received 84 messages in 13.554885387420654 secs ; rate=6.197027684052169 msgs/sec
+consumer received 91 messages in 14.560341358184814 secs ; rate=6.249853472621101 msgs/sec
+consumer received 99 messages in 15.566632270812988 secs ; rate=6.359757093101139 msgs/sec
+consumer received 106 messages in 16.572973251342773 secs ; rate=6.3959555351006 msgs/sec
+consumer received 114 messages in 17.576173305511475 secs ; rate=6.486053478105628 msgs/sec
+consumer received 121 messages in 18.577293395996094 secs ; rate=6.5133277179160425 msgs/sec
+consumer received 128 messages in 19.578935861587524 secs ; rate=6.537638250867703 msgs/sec
+consumer received 136 messages in 20.581908226013184 secs ; rate=6.607744943110354 msgs/sec
+consumer received 143 messages in 21.587653875350952 secs ; rate=6.624156604774878 msgs/sec
+consumer received 151 messages in 22.59197473526001 secs ; rate=6.683789344201484 msgs/sec
+consumer received 158 messages in 23.596550703048706 secs ; rate=6.695893903662207 msgs/sec
+consumer received 166 messages in 24.597997903823853 secs ; rate=6.748516714614187 msgs/sec
+consumer received 173 messages in 25.600322723388672 secs ; rate=6.757727309505584 msgs/sec
+consumer received 180 messages in 26.601778268814087 secs ; rate=6.766464940090805 msgs/sec
+consumer received 188 messages in 27.605760097503662 secs ; rate=6.810172925359896 msgs/sec
+consumer received 196 messages in 28.607449054718018 secs ; rate=6.851362371566477 msgs/sec
+consumer received 203 messages in 29.61115264892578 secs ; rate=6.855525092413595 msgs/sec
+consumer received 209 messages in 30.617509126663208 secs ; rate=6.826159474155025 msgs/sec

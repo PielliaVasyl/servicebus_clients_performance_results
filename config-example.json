@@ -1,0 +1,7 @@
+{
+  "topic_name": "test_1",
+  "subscription_name": "client1",
+  "service_namespace": "service_namespace",
+  "key_name": "key_name",
+  "key_value": "key_value"
+}

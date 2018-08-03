@@ -1,0 +1,65 @@
+python-qpid-proton sync send
+
+producer sent 7 messages in 2.325434684753418 secs ; rate=3.0101898995035667 msgs/sec
+producer sent 14 messages in 3.330207347869873 secs ; rate=4.203942438885955 msgs/sec
+producer sent 21 messages in 4.332939863204956 secs ; rate=4.846593920753583 msgs/sec
+producer sent 28 messages in 5.334547996520996 secs ; rate=5.248804588178907 msgs/sec
+producer sent 34 messages in 6.336355924606323 secs ; rate=5.3658601891295135 msgs/sec
+producer sent 41 messages in 7.338097095489502 secs ; rate=5.58727957213886 msgs/sec
+producer sent 49 messages in 8.340088129043579 secs ; rate=5.875237676369638 msgs/sec
+producer sent 55 messages in 9.343314170837402 secs ; rate=5.8865621977764 msgs/sec
+producer sent 62 messages in 10.34616994857788 secs ; rate=5.992555729139374 msgs/sec
+producer sent 69 messages in 11.347780704498291 secs ; rate=6.0804840873112935 msgs/sec
+producer sent 76 messages in 12.35262656211853 secs ; rate=6.152537650014222 msgs/sec
+producer sent 83 messages in 13.35535979270935 secs ; rate=6.214733357113257 msgs/sec
+producer sent 90 messages in 14.359711647033691 secs ; rate=6.267535324679827 msgs/sec
+producer sent 97 messages in 15.365313529968262 secs ; rate=6.3129203195764765 msgs/sec
+producer sent 104 messages in 16.370834827423096 secs ; rate=6.352760937138504 msgs/sec
+producer sent 111 messages in 17.375598192214966 secs ; rate=6.3882692711974025 msgs/sec
+producer sent 118 messages in 18.379880905151367 secs ; rate=6.42006336215856 msgs/sec
+producer sent 125 messages in 19.382976531982422 secs ; rate=6.448957919014487 msgs/sec
+producer sent 131 messages in 20.38473129272461 secs ; rate=6.426378553577226 msgs/sec
+producer sent 138 messages in 21.38854169845581 secs ; rate=6.452052783475331 msgs/sec
+producer sent 145 messages in 22.39231538772583 secs ; rate=6.4754357684458395 msgs/sec
+producer sent 152 messages in 23.394349813461304 secs ; rate=6.497295338917175 msgs/sec
+producer sent 159 messages in 24.39600706100464 secs ; rate=6.517459992629314 msgs/sec
+producer sent 166 messages in 25.39828109741211 secs ; rate=6.535875375318771 msgs/sec
+producer sent 173 messages in 26.40135908126831 secs ; rate=6.552692968095836 msgs/sec
+producer sent 180 messages in 27.40359330177307 secs ; rate=6.568481659241148 msgs/sec
+producer sent 188 messages in 28.406423807144165 secs ; rate=6.618221331779129 msgs/sec
+producer sent 195 messages in 29.40854024887085 secs ; rate=6.630726936794733 msgs/sec
+producer sent 201 messages in 30.411601543426514 secs ; rate=6.609319792414756 msgs/sec
+
+===============================================================================
+
+python-qpid-proton sync receive
+
+consumer received 7 messages in 2.387936592102051 secs ; rate=2.9314011197583962 msgs/sec
+consumer received 15 messages in 3.391110420227051 secs ; rate=4.423329865795311 msgs/sec
+consumer received 22 messages in 4.395917654037476 secs ; rate=5.0046433376189094 msgs/sec
+consumer received 29 messages in 5.399734020233154 secs ; rate=5.370634903744354 msgs/sec
+consumer received 37 messages in 6.402570009231567 secs ; rate=5.778929390330981 msgs/sec
+consumer received 43 messages in 7.405638217926025 secs ; rate=5.8063868007911275 msgs/sec
+consumer received 51 messages in 8.406925439834595 secs ; rate=6.066427062424788 msgs/sec
+consumer received 58 messages in 9.409271955490112 secs ; rate=6.164132599670288 msgs/sec
+consumer received 66 messages in 10.410861253738403 secs ; rate=6.339533146337943 msgs/sec
+consumer received 73 messages in 11.416535377502441 secs ; rate=6.3942341162323775 msgs/sec
+consumer received 81 messages in 12.419672727584839 secs ; rate=6.521910985632829 msgs/sec
+consumer received 87 messages in 13.423269271850586 secs ; rate=6.481282483280307 msgs/sec
+consumer received 93 messages in 14.426125049591064 secs ; rate=6.446637588424084 msgs/sec
+consumer received 100 messages in 15.43172836303711 secs ; rate=6.48015553718048 msgs/sec
+consumer received 108 messages in 16.435312747955322 secs ; rate=6.5712166027042 msgs/sec
+consumer received 115 messages in 17.43864679336548 secs ; rate=6.594548382260467 msgs/sec
+consumer received 122 messages in 18.440102577209473 secs ; rate=6.616015257462964 msgs/sec
+consumer received 130 messages in 19.445624113082886 secs ; rate=6.685308696908158 msgs/sec
+consumer received 137 messages in 20.450103998184204 secs ; rate=6.699232434816197 msgs/sec
+consumer received 144 messages in 21.4521381855011 secs ; rate=6.712617584074933 msgs/sec
+consumer received 152 messages in 22.4549777507782 secs ; rate=6.769100450109878 msgs/sec
+consumer received 159 messages in 23.459638833999634 secs ; rate=6.777597947056378 msgs/sec
+consumer received 167 messages in 24.46306300163269 secs ; rate=6.82661856321321 msgs/sec
+consumer received 174 messages in 25.465914487838745 secs ; rate=6.832662541260545 msgs/sec
+consumer received 182 messages in 26.469690799713135 secs ; rate=6.875788666257198 msgs/sec
+consumer received 190 messages in 27.47305727005005 secs ; rate=6.915866630072142 msgs/sec
+consumer received 195 messages in 28.475148677825928 secs ; rate=6.848076623102928 msgs/sec
+consumer received 202 messages in 29.48089838027954 secs ; rate=6.851894314561408 msgs/sec
+consumer received 210 messages in 30.48725390434265 secs ; rate=6.888124481755547 msgs/sec
