@@ -6,6 +6,7 @@ import os
 import time
 
 from proton.utils import BlockingConnection
+from urllib.parse import quote_plus
 
 import perftest
 
@@ -15,15 +16,17 @@ with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
                           ), 'r') as read_file:
     config = json.load(read_file)
 
-topic_name = config['topic_name']
-subscription_name = config['subscription_name']
-service_namespace = config['service_namespace']
-key_name = config['key_name']
-key_value = config['key_value']
-conn_str = f'amqps://{key_name}:{key_value}@{service_namespace}.servicebus.windows.net'
+TOPIC_NAME = config['topic_name']
+SUBSCRIPTION_NAME = config['subscription_name']
+SERVICE_NAMESPACE = config['service_namespace']
+KEY_NAME = config['key_name']
+KEY_VALUE = config['key_value']
 
-conn = BlockingConnection(conn_str, allowed_mechs='PLAIN')
-receiver = conn.create_receiver(topic_name, name=subscription_name)
+CONN_STR = 'amqps://{}:{}@{}.servicebus.windows.net'.format(
+    KEY_NAME, quote_plus(KEY_VALUE, safe=''), SERVICE_NAMESPACE)
+
+conn = BlockingConnection(CONN_STR, allowed_mechs='PLAIN')
+receiver = conn.create_receiver(TOPIC_NAME, name=SUBSCRIPTION_NAME)
 
 consumer = perftest.PerfConsumerSync(conn, receiver)
 consumer.start()

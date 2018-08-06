@@ -1,11 +1,14 @@
-from __future__ import print_function, unicode_literals
-
 import json
 import os
 
+import time
+from queue import Queue
 from proton import Message
 from proton.handlers import MessagingHandler
-from proton.reactor import Container
+from proton.reactor import Container, Handler
+from urllib.parse import quote_plus
+
+import perftest
 
 
 with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
@@ -13,41 +16,70 @@ with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
                           ), 'r') as read_file:
     config = json.load(read_file)
 
+TOPIC_NAME = config['topic_name']
+SERVICE_NAMESPACE = config['service_namespace']
+KEY_NAME = config['key_name']
+KEY_VALUE = config['key_value']
 
-topic_name = config['topic_name']
-service_namespace = config['service_namespace']
-key_name = config['key_name']
-key_value = config['key_value']
-conn_str = f'amqps://{key_name}:{key_value}@{service_namespace}.servicebus.windows.net'
+CONN_STR = 'amqps://{}:{}@{}.servicebus.windows.net'.format(
+    KEY_NAME, quote_plus(KEY_VALUE, safe=''), SERVICE_NAMESPACE)
+PAYLOAD = {
+    'hello': 'world',
+    'time': -1
+}
 
 
-class Send(MessagingHandler):
-    def __init__(self, url, messages):
-        super(Send, self).__init__()
+class Producer(Handler):
+    def __init__(self, period, queue):
+        self.period = period
+        self.queue = queue
+
+    def on_reactor_init(self, event):
+        self.container = event.reactor
+        self.container.schedule(self.period, self)
+
+    def on_timer_task(self, event):
+        PAYLOAD['time'] = time.time()
+        self.queue.put(PAYLOAD)
+        self.container.schedule(self.period, self)
+
+
+class Sender(MessagingHandler):
+    def __init__(self, url, target):
+        super(Sender, self).__init__()
         self.url = url
-        self.sent = 0
-        self.confirmed = 0
-        self.total = messages
+        self.target = target
+        self.queue = Queue()
+        self.rate = perftest.PerfRate()
 
     def on_start(self, event):
-        print('start')
-        event.container.create_sender(self.url)
+        self.container = event.container
+        conn = self.container.connect(self.url, allowed_mechs='PLAIN')
+        self.sender = self.container.create_sender(conn, self.target)
+
+        self.container.schedule(1, self)
 
     def on_sendable(self, event):
-        print('sendable')
-        while event.sender.credit and self.sent < self.total:
-            msg = Message(id=(self.sent+1), body={'sequence':(self.sent+1)})
-            event.sender.send(msg)
-            self.sent += 1
+        self.send()
+
+    def send(self):
+        while self.sender.credit and not self.queue.empty():
+            msg = Message(body=self.queue.get(False))
+            self.sender.send(msg)
+            self.rate.increment()
 
     def on_accepted(self, event):
-        print('accepted')
-        self.confirmed += 1
-        if self.confirmed == self.total:
-            print("all messages confirmed")
-            event.connection.close()
+        pass
 
-    def on_disconnected(self, event):
-        self.sent = self.confirmed
+    def on_timer_task(self, event):
+        print("producer sent {}".format(self.rate.print_rate()))
+        self.send()
+        self.container.schedule(1, self)
 
-Container(Send(conn_str, 100), allowed_mechs='PLAIN').run()
+
+try:
+    sender = Sender(CONN_STR, TOPIC_NAME)
+    producer = Producer(0.001, sender.queue)
+    Container(sender, producer).run()
+except KeyboardInterrupt:
+    pass

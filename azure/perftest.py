@@ -10,8 +10,8 @@ with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
                           ), 'r') as read_file:
     config = json.load(read_file)
 
-topic_name = config['topic_name']
-subscription_name = config['subscription_name']
+TOPIC_NAME = config['topic_name']
+SUBSCRIPTION_NAME = config['subscription_name']
 
 
 class PerfRate:
@@ -42,7 +42,7 @@ class PerfProducer(threading.Thread):
         while self.running:
             i += 1
             msg = Message(b'Test Message1')
-            self.bus_service.send_topic_message(topic_name, msg)
+            self.bus_service.send_topic_message(TOPIC_NAME, msg)
             self.rate.increment()
 
     def stop(self):
@@ -60,7 +60,7 @@ class PerfConsumerSync(threading.Thread):
     def run(self):
         while self.running:
             text_message = self.bus_service.receive_subscription_message(
-                topic_name, subscription_name)
+                TOPIC_NAME, SUBSCRIPTION_NAME)
             if text_message is not None:
                 self.rate.increment()
 
