@@ -13,8 +13,8 @@ with open(os.path.abspath(
         'r') as read_file:
     config = json.load(read_file)
 
-TOPIC_NAME = config['topic_name']
-SUBSCRIPTION_NAME = config['subscription_name']
+TOPIC_NAME = 'test_topic_4'
+SUBSCRIPTION_NAME = 'client1'
 SERVICE_NAMESPACE = config['service_namespace']
 KEY_NAME = config['key_name']
 KEY_VALUE = config['key_value']
@@ -26,7 +26,7 @@ ADDRESS = CONN_STR + '/' + TOPIC_NAME
 
 class Recv(MessagingHandler):
     def __init__(self, url, target):
-        super(Recv, self).__init__()
+        super(Recv, self).__init__(auto_accept=False)
         self.url = url
         self.target = target
 
@@ -37,7 +37,8 @@ class Recv(MessagingHandler):
 
     def on_message(self, event):
         msg = event.message
-        print(msg.body)
+        print(msg.id, ',', msg.delivery_count)
+        self.accept(event.delivery)
         # self.release(event.delivery, delivered=False)
         # or self.accept(event.delivery)
 

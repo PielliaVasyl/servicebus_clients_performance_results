@@ -4,7 +4,10 @@ import random
 
 from proton.handlers import MessagingHandler
 from proton.reactor import Container, Handler, Copy
-from urllib.parse import quote_plus
+try:
+    from urllib.parse import quote_plus
+except ImportError:
+    from urllib import quote_plus
 
 import perftest
 
@@ -14,8 +17,8 @@ with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
                           ), 'r') as read_file:
     config = json.load(read_file)
 
-TOPIC_NAME = config['topic_name']
-SUBSCRIPTION_NAME = config['subscription_name']
+TOPIC_NAME = 'test_topic_4'
+SUBSCRIPTION_NAME = 'client1'
 SERVICE_NAMESPACE = config['service_namespace']
 KEY_NAME = config['key_name']
 KEY_VALUE = config['key_value']

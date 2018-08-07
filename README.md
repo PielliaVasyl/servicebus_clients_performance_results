@@ -26,3 +26,21 @@
 ### CONS
 1. Does not support custom Azure ServiceBus features like creating topics, queues, it is difficult or impossible to pass SessionId (to send in queue where session enabled) in case it will be needed.
 2. More difficult deployment process (need install additional tools), but doable.
+
+
+## azure-uamqp-python
+
+### PROS
+1. Supported with Microsoft.
+2. Use amqp 1.0.
+3. On deployment requires only requirements.txt dependencies.
+4. Sends and receives both in synchronous and asynchronous  mode.
+5. In synchronous mode batches can be used. It increases performance.
+6. Performance: 
+    * sends in sync mode (without batches) 5.5 msg/sec, receives 6.6 msg/sec, 
+    * sends in sync mode (with batches) 238 msg/sec (50 msg/batch), receives 418 msg/sec (300 msg/batch), 
+    * sends in async mode 6.0 msg/sec, receives 457 msg/sec.
+
+### CONS
+1. Only Python 3.
+2. Does not support custom Azure ServiceBus features like creating topics, queues, it is difficult or impossible to pass SessionId (to send in queue where session enabled) in case it will be needed.

@@ -25,6 +25,7 @@ try:
         # Methods receiver.accept() or receiver.reject() are used after
         # receiver.receive()
         if msg is not None:
-            print("Qpid package: Message received: ", msg.body)
+            print("Qpid package: Message received: ",
+                  msg.id,', ', msg.body,', ', msg.correlation_id)
 except KeyboardInterrupt:
     pass

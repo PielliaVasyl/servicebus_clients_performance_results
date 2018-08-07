@@ -1,15 +1,12 @@
-# consumer received 217 messages in 30.603073120117188 secs ;
-# rate=7.090791148597205 msgs/sec
-
 import json
 import os
 import time
 
-from proton.utils import BlockingConnection
+import uamqp
+from uamqp import authentication
 from urllib.parse import quote_plus
 
 import perftest
-
 
 with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
                                        '../config.json')
@@ -22,13 +19,18 @@ SERVICE_NAMESPACE = config['service_namespace']
 KEY_NAME = config['key_name']
 KEY_VALUE = config['key_value']
 
-CONN_STR = 'amqps://{}:{}@{}.servicebus.windows.net'.format(
-    KEY_NAME, quote_plus(KEY_VALUE, safe=''), SERVICE_NAMESPACE)
+CONN_STR = 'amqps://{}:{}@{}.servicebus.windows.net/{}/Subscriptions/{}'.format(
+    KEY_NAME, quote_plus(KEY_VALUE, safe=''), SERVICE_NAMESPACE, TOPIC_NAME,
+    SUBSCRIPTION_NAME)
+hostname = '{}.servicebus.windows.net'.format(SERVICE_NAMESPACE)
 
-conn = BlockingConnection(CONN_STR, allowed_mechs='PLAIN')
-receiver = conn.create_receiver(TOPIC_NAME, name=SUBSCRIPTION_NAME)
+sas_auth = authentication.SASTokenAuth.from_shared_access_key(
+        CONN_STR, KEY_NAME, KEY_VALUE)
 
-consumer = perftest.PerfConsumerSync(conn, receiver)
+receive_client = uamqp.ReceiveClient(
+    CONN_STR, auth=sas_auth, debug=False, timeout=0, prefetch=1)
+
+consumer = perftest.PerfConsumerSync(receive_client)
 consumer.start()
 
 for i in range(1, 30):

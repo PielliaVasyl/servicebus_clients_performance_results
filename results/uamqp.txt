@@ -1,0 +1,198 @@
+azure-uamqp-python sync send (without using batch)
+
+producer sent  0 messages in 1.2375304698944092 secs ; rate=0.0 msgs/sec
+producer sent  0 messages in 2.2445390224456787 secs ; rate=0.0 msgs/sec
+producer sent  7 messages in 3.251647710800171 secs ; rate=2.1527547331618617 msgs/sec
+producer sent  14 messages in 4.258692502975464 secs ; rate=3.2873939572341695 msgs/sec
+producer sent  20 messages in 5.265775442123413 secs ; rate=3.7981110702159073 msgs/sec
+producer sent  27 messages in 6.272226810455322 secs ; rate=4.304691270888525 msgs/sec
+producer sent  33 messages in 7.278781175613403 secs ; rate=4.533726073612729 msgs/sec
+producer sent  40 messages in 8.285831451416016 secs ; rate=4.827517942470838 msgs/sec
+producer sent  47 messages in 9.29405927658081 secs ; rate=5.056993785097831 msgs/sec
+producer sent  53 messages in 10.301953077316284 secs ; rate=5.144655542714507 msgs/sec
+producer sent  60 messages in 11.309254169464111 secs ; rate=5.305389648240888 msgs/sec
+producer sent  67 messages in 12.317444324493408 secs ; rate=5.439440052249278 msgs/sec
+producer sent  68 messages in 13.32423448562622 secs ; rate=5.1034826858801035 msgs/sec
+producer sent  68 messages in 14.331320762634277 secs ; rate=4.744852280279347 msgs/sec
+producer sent  71 messages in 15.33720350265503 secs ; rate=4.629266344918039 msgs/sec
+producer sent  77 messages in 16.34598994255066 secs ; rate=4.710635469043043 msgs/sec
+producer sent  84 messages in 17.35238766670227 secs ; rate=4.840832374969857 msgs/sec
+producer sent  91 messages in 18.360297679901123 secs ; rate=4.956346655512944 msgs/sec
+producer sent  98 messages in 19.366475582122803 secs ; rate=5.0602908920848675 msgs/sec
+producer sent  105 messages in 20.373374462127686 secs ; rate=5.153785407281734 msgs/sec
+producer sent  110 messages in 21.38045644760132 secs ; rate=5.144885483132001 msgs/sec
+producer sent  117 messages in 22.388306140899658 secs ; rate=5.225942474775291 msgs/sec
+producer sent  124 messages in 23.396661281585693 secs ; rate=5.299901490542756 msgs/sec
+producer sent  131 messages in 24.404556035995483 secs ; rate=5.367850159076102 msgs/sec
+producer sent  138 messages in 25.411706924438477 secs ; rate=5.430567903617887 msgs/sec
+producer sent  143 messages in 26.418835878372192 secs ; rate=5.412804737436107 msgs/sec
+producer sent  150 messages in 27.425724506378174 secs ; rate=5.469317682568996 msgs/sec
+producer sent  156 messages in 28.432356357574463 secs ; rate=5.486706695642591 msgs/sec
+producer sent  163 messages in 29.440171718597412 secs ; rate=5.5366524882405015 msgs/sec
+
+===============================================================================
+
+azure-uamqp-python sync receive (without using batch)
+
+consumer received 0 messages in 1.2109355926513672 secs ; rate=0.0 msgs/sec
+consumer received 1 messages in 2.2183501720428467 secs ; rate=0.4507854587624074 msgs/sec
+consumer received 8 messages in 3.2250969409942627 secs ; rate=2.480545591765588 msgs/sec
+consumer received 15 messages in 4.234311103820801 secs ; rate=3.5424888800600542 msgs/sec
+consumer received 23 messages in 5.240624189376831 secs ; rate=4.388790183929399 msgs/sec
+consumer received 29 messages in 6.24848484992981 secs ; rate=4.641125120168254 msgs/sec
+consumer received 36 messages in 7.255640983581543 secs ; rate=4.961656741487451 msgs/sec
+consumer received 43 messages in 8.265233755111694 secs ; rate=5.202514686702761 msgs/sec
+consumer received 50 messages in 9.272419214248657 secs ; rate=5.39233600689305 msgs/sec
+consumer received 56 messages in 10.2793607711792 secs ; rate=5.4478095716817565 msgs/sec
+consumer received 64 messages in 11.285994529724121 secs ; rate=5.670745261433725 msgs/sec
+consumer received 71 messages in 12.293479204177856 secs ; rate=5.775419539154638 msgs/sec
+consumer received 79 messages in 13.300651550292969 secs ; rate=5.9395586525428445 msgs/sec
+consumer received 86 messages in 14.308854341506958 secs ; rate=6.010264550008885 msgs/sec
+consumer received 93 messages in 15.316323041915894 secs ; rate=6.0719534150258285 msgs/sec
+consumer received 100 messages in 16.325064182281494 secs ; rate=6.125550189783364 msgs/sec
+consumer received 108 messages in 17.333831310272217 secs ; rate=6.230590229408661 msgs/sec
+consumer received 115 messages in 18.344016790390015 secs ; rate=6.269074069984809 msgs/sec
+consumer received 122 messages in 19.350447177886963 secs ; rate=6.304763857830504 msgs/sec
+consumer received 130 messages in 20.35812997817993 secs ; rate=6.385655270859132 msgs/sec
+consumer received 137 messages in 21.364798545837402 secs ; rate=6.4124171218404635 msgs/sec
+consumer received 145 messages in 22.372073650360107 secs ; rate=6.481294593702808 msgs/sec
+consumer received 152 messages in 23.379047870635986 secs ; rate=6.501547917651152 msgs/sec
+consumer received 159 messages in 24.385611295700073 secs ; rate=6.520238433720812 msgs/sec
+consumer received 166 messages in 25.392465114593506 secs ; rate=6.537372376051698 msgs/sec
+consumer received 173 messages in 26.3992760181427 secs ; rate=6.553210015346901 msgs/sec
+consumer received 181 messages in 27.406447410583496 secs ; rate=6.604285381771282 msgs/sec
+consumer received 188 messages in 28.412879943847656 secs ; rate=6.61671750176484 msgs/sec
+consumer received 196 messages in 29.42080807685852 secs ; rate=6.661951619002859 msgs/sec
+
+===============================================================================
+
+azure-uamqp-python sync send (with using batch, 50 msg/batch)
+
+producer sent  50 messages in 4.263711452484131 secs ; rate=11.726872363951578 msgs/sec
+producer sent  50 messages in 5.272305488586426 secs ; rate=9.483517240842897 msgs/sec
+producer sent  350 messages in 6.279459238052368 secs ; rate=55.737283535350365 msgs/sec
+producer sent  700 messages in 7.286553621292114 secs ; rate=96.0673641314493 msgs/sec
+producer sent  1000 messages in 8.293925285339355 secs ; rate=120.57017221599963 msgs/sec
+producer sent  1300 messages in 9.302871942520142 secs ; rate=139.74179243058902 msgs/sec
+producer sent  1650 messages in 10.309916496276855 secs ; rate=160.04009349599022 msgs/sec
+producer sent  1900 messages in 11.317060470581055 secs ; rate=167.88811944047586 msgs/sec
+producer sent  2100 messages in 12.330496788024902 secs ; rate=170.30943976559584 msgs/sec
+producer sent  2350 messages in 13.338807344436646 secs ; rate=176.17767011082432 msgs/sec
+producer sent  2650 messages in 14.346740245819092 secs ; rate=184.71094859142372 msgs/sec
+producer sent  2950 messages in 15.354581832885742 secs ; rate=192.12506287092916 msgs/sec
+producer sent  3250 messages in 16.362690687179565 secs ; rate=198.62258977653522 msgs/sec
+producer sent  3550 messages in 17.370816469192505 secs ; rate=204.36575369361577 msgs/sec
+producer sent  3850 messages in 18.378887176513672 secs ; rate=209.47949476070042 msgs/sec
+producer sent  4150 messages in 19.393632888793945 secs ; rate=213.98775689922223 msgs/sec
+producer sent  4500 messages in 20.405351400375366 secs ; rate=220.53038498112903 msgs/sec
+producer sent  4800 messages in 21.4135479927063 secs ; rate=224.157155163401 msgs/sec
+producer sent  5100 messages in 22.420706748962402 secs ; rate=227.4682978151891 msgs/sec
+producer sent  5350 messages in 23.434357166290283 secs ; rate=228.29728001653217 msgs/sec
+producer sent  5700 messages in 24.44202446937561 secs ; rate=233.20490522958758 msgs/sec
+producer sent  6000 messages in 25.4496328830719 secs ; rate=235.75978590995572 msgs/sec
+producer sent  6300 messages in 26.46466898918152 secs ; rate=238.05323250312992 msgs/sec
+producer sent  6550 messages in 27.473199605941772 secs ; rate=238.41416704093677 msgs/sec
+producer sent  6850 messages in 28.486736059188843 secs ; rate=240.46278891928108 msgs/sec
+producer sent  7050 messages in 29.49953603744507 secs ; rate=238.98680952307598 msgs/sec
+
+===============================================================================
+
+azure-uamqp-python sync receive (with using batch, 300 msg/batch)
+
+consumer received 0 messages in 1.2057883739471436 secs ; rate=0.0 msgs/sec
+consumer received 1 messages in 2.2139272689819336 secs ; rate=0.45168602149240716 msgs/sec
+consumer received 267 messages in 3.220672369003296 secs ; rate=82.90194388280132 msgs/sec
+consumer received 501 messages in 4.22721266746521 secs ; rate=118.51781289736194 msgs/sec
+consumer received 700 messages in 5.233783721923828 secs ; rate=133.74645136132887 msgs/sec
+consumer received 901 messages in 6.240367889404297 secs ; rate=144.38251333384275 msgs/sec
+consumer received 1150 messages in 7.252088308334351 secs ; rate=158.57501330732285 msgs/sec
+consumer received 1401 messages in 8.264739513397217 secs ; rate=169.51532443690044 msgs/sec
+consumer received 1835 messages in 9.271504640579224 secs ; rate=197.91825287652136 msgs/sec
+consumer received 2400 messages in 10.280320644378662 secs ; rate=233.45575328064632 msgs/sec
+consumer received 2940 messages in 11.288562536239624 secs ; rate=260.44059999328795 msgs/sec
+consumer received 3432 messages in 12.301645755767822 secs ; rate=278.987061417441 msgs/sec
+consumer received 3929 messages in 13.309432744979858 secs ; rate=295.20416649477164 msgs/sec
+consumer received 4500 messages in 14.32256293296814 secs ; rate=314.18957773554297 msgs/sec
+consumer received 5084 messages in 15.334633111953735 secs ; rate=331.5371135966007 msgs/sec
+consumer received 5650 messages in 16.34801721572876 secs ; rate=345.60766149450956 msgs/sec
+consumer received 6141 messages in 17.360926866531372 secs ; rate=353.7253539060004 msgs/sec
+consumer received 6667 messages in 18.374019622802734 secs ; rate=362.849291383473 msgs/sec
+consumer received 7200 messages in 19.381707668304443 secs ; rate=371.48429453274656 msgs/sec
+consumer received 7650 messages in 20.38840651512146 secs ; rate=375.2132367150041 msgs/sec
+consumer received 8100 messages in 21.401853561401367 secs ; rate=378.4718915472115 msgs/sec
+consumer received 8538 messages in 22.41363215446472 secs ; rate=380.9288892206281 msgs/sec
+consumer received 9040 messages in 23.42647957801819 secs ; rate=385.8881130599973 msgs/sec
+consumer received 9600 messages in 24.438599586486816 secs ; rate=392.82119935007506 msgs/sec
+consumer received 10032 messages in 25.450429916381836 secs ; rate=394.1780171478612 msgs/sec
+consumer received 10537 messages in 26.459168672561646 secs ; rate=398.236245832128 msgs/sec
+consumer received 11100 messages in 27.466078281402588 secs ; rate=404.1348708860217 msgs/sec
+consumer received 11739 messages in 28.47818422317505 secs ; rate=412.210269728047 msgs/sec
+consumer received 12335 messages in 29.48486351966858 secs ; rate=418.3502491633256 msgs/sec
+
+===============================================================================
+
+azure-uamqp-python async send (need to double check it)
+
+2 messages in 2.243173360824585 secs ; rate=0.8915940403575429 msgs/sec
+7 messages in 3.016775608062744 secs ; rate=2.3203581934604434 msgs/sec
+14 messages in 4.1115334033966064 secs ; rate=3.4050556389580504 msgs/sec
+20 messages in 5.046181678771973 secs ; rate=3.9633927736163383 msgs/sec
+27 messages in 6.090949058532715 secs ; rate=4.432806733488622 msgs/sec
+34 messages in 7.12514066696167 secs ; rate=4.771835615492264 msgs/sec
+40 messages in 8.015753269195557 secs ; rate=4.990173556578833 msgs/sec
+47 messages in 9.06510043144226 secs ; rate=5.184719171668601 msgs/sec
+54 messages in 10.08390498161316 secs ; rate=5.355068309197954 msgs/sec
+61 messages in 11.132824659347534 secs ; rate=5.479292261086869 msgs/sec
+67 messages in 12.051671743392944 secs ; rate=5.559394698642637 msgs/sec
+74 messages in 13.09360122680664 secs ; rate=5.651615527170567 msgs/sec
+80 messages in 14.019027709960938 secs ; rate=5.706529843232824 msgs/sec
+87 messages in 15.041163682937622 secs ; rate=5.784126935517028 msgs/sec
+94 messages in 16.107332944869995 secs ; rate=5.835851305845016 msgs/sec
+99 messages in 17.05332064628601 secs ; rate=5.8053209725790795 msgs/sec
+106 messages in 18.126198768615723 secs ; rate=5.847889088777498 msgs/sec
+112 messages in 19.119653463363647 secs ; rate=5.857846755152239 msgs/sec
+118 messages in 20.090479135513306 secs ; rate=5.873428861704703 msgs/sec
+124 messages in 21.010233402252197 secs ; rate=5.901885887031973 msgs/sec
+131 messages in 22.098137140274048 secs ; rate=5.928101503237182 msgs/sec
+137 messages in 23.033820390701294 secs ; rate=5.947775821648181 msgs/sec
+144 messages in 24.075320720672607 secs ; rate=5.981228730895054 msgs/sec
+151 messages in 25.1282320022583 secs ; rate=6.00917724678877 msgs/sec
+156 messages in 26.010971069335938 secs ; rate=5.997469282640769 msgs/sec
+162 messages in 27.071580410003662 secs ; rate=5.984135301540679 msgs/sec
+167 messages in 28.02083730697632 secs ; rate=5.959850455947017 msgs/sec
+174 messages in 29.06270933151245 secs ; rate=5.987053650615198 msgs/sec
+180 messages in 30.017722606658936 secs ; rate=5.99645757137052 msgs/sec
+
+===============================================================================
+
+azure-uamqp-python async receive
+
+1 messages in 2.0714876651763916 secs ; rate=0.48274484893678954 msgs/sec
+218 messages in 3.0200631618499756 secs ; rate=72.18392077153165 msgs/sec
+462 messages in 4.004970550537109 secs ; rate=115.35665348102019 msgs/sec
+708 messages in 5.052863597869873 secs ; rate=140.11856569776995 msgs/sec
+902 messages in 6.032589435577393 secs ; rate=149.52119809122524 msgs/sec
+1183 messages in 7.0001749992370605 secs ; rate=168.995775124041 msgs/sec
+1416 messages in 8.115466594696045 secs ; rate=174.48164975818432 msgs/sec
+1855 messages in 9.02107548713684 secs ; rate=205.62958403851582 msgs/sec
+2401 messages in 10.1000337600708 secs ; rate=237.7219776721983 msgs/sec
+3001 messages in 11.132913589477539 secs ; rate=269.5610610717796 msgs/sec
+3510 messages in 12.000527620315552 secs ; rate=292.4871398202494 msgs/sec
+4055 messages in 13.008734703063965 secs ; rate=311.7136364572736 msgs/sec
+4539 messages in 14.0168616771698 secs ; rate=323.82426997856254 msgs/sec
+5156 messages in 15.031384944915771 secs ; rate=343.0156315532302 msgs/sec
+5815 messages in 16.000611543655396 secs ; rate=363.42360941234017 msgs/sec
+6405 messages in 17.00015354156494 secs ; rate=376.7613030282308 msgs/sec
+7024 messages in 18.00000500679016 secs ; rate=390.2221136799867 msgs/sec
+7559 messages in 19.021823167800903 secs ; rate=397.3856729356763 msgs/sec
+8101 messages in 20.02390193939209 secs ; rate=404.56650379730837 msgs/sec
+8701 messages in 21.04109764099121 secs ; rate=413.5240541372304 msgs/sec
+9301 messages in 22.100977420806885 secs ; rate=420.8411158885492 msgs/sec
+9873 messages in 23.000337600708008 secs ; rate=429.25456884146274 msgs/sec
+10407 messages in 24.00061845779419 secs ; rate=433.6138261728973 msgs/sec
+10920 messages in 25.0007586479187 secs ; rate=436.7867453057903 msgs/sec
+11451 messages in 26.00743865966797 secs ; rate=440.2971069103424 msgs/sec
+12001 messages in 27.028265237808228 secs ; rate=444.0166579101243 msgs/sec
+12601 messages in 28.024363040924072 secs ; rate=449.6444747592913 msgs/sec
+13201 messages in 29.100096464157104 secs ; rate=453.6411079000996 msgs/sec
+13749 messages in 30.084781885147095 secs ; rate=457.0084653592886 msgs/sec

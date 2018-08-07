@@ -4,3 +4,6 @@ config.json
 
 *.pyc
 */__pycache__/*
+transport_lib/
+test_env1/
+*.json

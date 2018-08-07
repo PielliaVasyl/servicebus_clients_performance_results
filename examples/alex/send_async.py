@@ -1,19 +1,35 @@
 import time
+import os
+import json
+
 from urllib.parse import quote_plus
 from queue import Queue
 from proton import Message
 from proton.handlers import MessagingHandler
 from proton.reactor import Container, Handler
 
-KEY = '<SAS primary key>'
-SERVER = ('amqps://<SAS policy name>:' +
-          quote_plus(KEY, safe='') +
-          '@<resource_name>.servicebus.windows.net')
-QUEUE = '<queue_name>'
+# KEY = '<SAS primary key>'
+# SERVER = ('amqps://<SAS policy name>:' +
+#           quote_plus(KEY, safe='') +
+#           '@<resource_name>.servicebus.windows.net')
+# QUEUE = '<queue_name>'
 PAYLOAD = {
     'hello': 'world',
     'time': -1
 }
+QUEUE = 'test_topic_4'
+with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                       '../../config.json')
+                          ), 'r') as read_file:
+    config = json.load(read_file)
+
+SERVICE_NAMESPACE = config['service_namespace']
+KEY_NAME = config['key_name']
+KEY_VALUE = config['key_value']
+
+CONNECTION_URL = 'amqps://{}:{}@{}.servicebus.windows.net'.format(
+    KEY_NAME, quote_plus(KEY_VALUE, safe=''), SERVICE_NAMESPACE)
+
 
 
 class Producer(Handler):
@@ -65,7 +81,7 @@ class Sender(MessagingHandler):
 
 
 try:
-    sender = Sender(SERVER, QUEUE)
+    sender = Sender(CONNECTION_URL, QUEUE)
     producer = Producer(2.0, sender.queue)
     Container(sender, producer).run()
 except KeyboardInterrupt:
